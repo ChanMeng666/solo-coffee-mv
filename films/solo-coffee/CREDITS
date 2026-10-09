@@ -1,0 +1,27 @@
+A Coffee for One (独身主义的咖啡)
+Song, lyrics: Chan Meng. The recording is the whole soundtrack, unaltered.
+
+Picture: every frame is drawn by code in this folder.
+- paint/wc.py        procedural watercolour engine (numpy + OpenCV): subtractive washes on a paper-white ground, edge
+                     pooling, granulation, wet-in-wet bleed, dry brush, salt, pen lines with pressure/taper/tremor.
+                     First written for 云端的梦游者 in memory-amber-2022-mv (same author); this copy carries a new palette.
+- paint/kit.py, s_*.py, build.py   the paintings, split by depth → art/*.webp
+- stage.js, shots_*.js, edit.js, type.js   parallax camera, light, rain, steam, ripples, drawn-on pen lines, the cut, the lyric.
+- post.js            WebGL2: water on glass (height field → refraction, fog, wiped clear by a mask), wet-paint
+                     transitions, grade with a spreading saturation front, bloom, paper.
+No image-generation model, no photographs, no SVG.
+
+Adapted (ideas and structure; no code copied unless stated):
+- Harness (harness/render.mjs, harness/preview.html), lib/mv.js, lib/fonts.css, tools/*: copied from memory-amber-2022-mv /
+  october-rain-february-line-mv (same author), with the timing script pointed at a larger recogniser and the
+  renderer given --tune, --preset and --threads for the final encode.
+- Pen-and-wash habits (overshooting lines, colour that does not fill the line, tide-line edges): notes in
+  lemo-opuscar/styles/urban-sketch and styles/watercolor, and huashu-art-motion/references (same author's libraries).
+- Noise-masked transition with a darker band at the wet front: the idea is from lemo-opuscar/styles/ink-wash/demo/comp.js.
+- Rain on glass: the general method (a procedural height field of sitting and running drops, refracting a blurred
+  scene) is well known from shader demos; the implementation in post.js is written from scratch for this film.
+- Directing rules followed: "every shot needs an event", "name what carries across each cut", varied shot lengths
+  (ClaudeAnimationBase/ANIMATION_GUIDE.md, lemo-opuscar/DIRECTOR.md, onetake/references/rhythm.md).
+
+Fonts (SIL Open Font License 1.1, in /assets/fonts): Noto Serif SC (titles), LXGW WenKai (lyrics), Cormorant Garamond.
+Libraries: numpy, OpenCV, Pillow (painting); faster-whisper, librosa, pypinyin, OpenCC (timing); puppeteer-core, ffmpeg (rendering).
