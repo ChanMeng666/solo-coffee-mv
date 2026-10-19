@@ -12,7 +12,11 @@
 
 ### A Coffee for One · 独身主义的咖啡
 
-<!-- FILM: a-coffee-for-one · 16:9, 4:12 — Chan uploads the video here in GitHub's web editor -->
+
+
+https://github.com/user-attachments/assets/67f5c0f3-9a22-4ef9-a181-077cdb06d2b2
+
+
 
 ▶ Watch on YouTube: https://youtu.be/ZZGf4xiduVI
 
